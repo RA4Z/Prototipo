@@ -1,0 +1,47 @@
+.Menu-body {
+    background-color: #282c34;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+
+  body {
+    scrollbar-width: none; /* para navegadores Mozilla */
+    -ms-overflow-style: none; /* para navegadores Edge e Internet Explorer */  
+    background-color: #282c34;
+  } 
+  ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* opcional: torna a área invisível ao redor da barra de rolagem transparente */
+  }
+   
+  .central{
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1;
+    display: none;
+  }
+  
+  .overlay.ativo {
+    display: block;
+  }
+
+  
