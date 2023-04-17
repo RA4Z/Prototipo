@@ -42,7 +42,7 @@ const Card: React.FC<CardProps> = (props) => {
   return (
     <div className="card" onClick={props.onClick}>
       <div className="titulo">{props.texto}</div>
-      <img className="icone" src={imagemSRC} style={{...iconeStyle, opacity: iconeOpacity}}/>
+      <img className="icone" alt="Imagem" src={imagemSRC} style={{...iconeStyle, opacity: iconeOpacity}}/>
       {/* Conteúdo do card aqui */}
     </div>
   );
