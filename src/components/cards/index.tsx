@@ -1,13 +1,19 @@
-import { useState, useEffect } from 'react';
-import './style.css';
+import React, { useState, useEffect } from 'react';
+import './style.css'
 
-function Card(props) {
+const PBI: string = 'https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg';
+const GIT: string = 'https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg';
+const Figma: string = 'https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg';
+const SAP: string = 'https://cdn.cdnlogo.com/logos/s/30/sap-bi.svg';
 
-  const PBI = 'https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg'
-  const GIT = 'https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg'
-  const Figma = 'https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg'
-  const SAP = 'https://cdn.cdnlogo.com/logos/s/30/sap-bi.svg'
-  
+type CardProps = {
+  texto: string;
+  ico: string;
+  onClick: () => void;
+}
+
+const Card: React.FC<CardProps> = (props) => {
+
   const [iconeOpacity, setIconeOpacity] = useState(1);
   const [imagemSRC, setImagemSRC] = useState("");
 
