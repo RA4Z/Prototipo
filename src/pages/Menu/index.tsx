@@ -4,7 +4,7 @@ import Card from '../../components/cards';
 import { Link } from 'react-router-dom';
 import './style.css';
 
-function Menu() {
+const Menu: React.FC = () => {
 
   function navegar(pagina: string) {
     if (pagina === "Figma") {
