@@ -2,7 +2,7 @@ import React from 'react';
 import './style.css';
 
 type PowerBIProps = {
-  src: string | undefined;
+  src?: string;
 }
 
 const PowerBI: React.FC<PowerBIProps> = (props) => {

@@ -4,17 +4,19 @@ import PowerBI from '../../components/powerbi'
 import './style.css';
 
 function Indicadores() {
-  const power = document.querySelector('.Power') as HTMLInputElement;
-  const overlay = document.querySelector('.overlay') as HTMLInputElement;
-  const iframe = document.querySelector('.LayoutBI') as HTMLInputElement;
 
   function AbrirPowerBI(link){
+    const power = document.querySelector('.Power') as HTMLInputElement;
+    const overlay = document.querySelector('.overlay') as HTMLInputElement;
+    const iframe = document.querySelector('.LayoutBI') as HTMLInputElement;
     power.classList.add('ativo');
     overlay.classList.add('ativo'); 
     iframe.src = link;
   }
 
   function FecharPowerBI() {
+    const power = document.querySelector('.Power') as HTMLInputElement;
+    const overlay = document.querySelector('.overlay') as HTMLInputElement;
     power.classList.add('fechando');
     overlay.classList.add('fechando');
     setTimeout(() => {
@@ -28,7 +30,7 @@ function Indicadores() {
     <div className="overlay" onClick={FecharPowerBI}/>
     <TopBar />
       <body className="Menu-body">
-        <PowerBI src=""/>
+        <PowerBI/>
         <div className="central">
 
           <Card texto="Média de Dias em Estoque" ico="PBI" target="PowerBI" 
