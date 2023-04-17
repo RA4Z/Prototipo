@@ -37,11 +37,11 @@ const Card: React.FC<CardProps> = (props) => {
 
   function AbrirPowerBI(link? : string){
     if (link !== undefined) {
+      const overlay = document.querySelector(Overlay) as HTMLInputElement;
       const power = document.querySelector('.Power') as HTMLInputElement;
       const iframe = document.querySelector('.LayoutBI') as HTMLInputElement;
-      power.classList.add('ativo');
-      const overlay = document.querySelector(Overlay) as HTMLInputElement;
       overlay.classList.add('ativo'); 
+      power.classList.add('ativo');
       iframe.src = link;
     }
   }

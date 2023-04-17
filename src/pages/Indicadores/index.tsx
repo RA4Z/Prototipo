@@ -8,11 +8,11 @@ const Indicadores= () => {
   function FecharPowerBI() {
     const power = document.querySelector('.Power') as HTMLInputElement;
     const overlay = document.querySelector(Overlay) as HTMLInputElement;
-    power.classList.add('fechando');
     overlay.classList.add('fechando');
+    power.classList.add('fechando');
     setTimeout(() => {
-      power.classList.remove('ativo', 'fechando');
       overlay.classList.remove('ativo', 'fechando');
+      power.classList.remove('ativo', 'fechando');
     }, 1000);
   }
 
