@@ -1,11 +1,13 @@
-import './style.css';
-import PBI from '../../assets/PBI.png'
-import GIT from '../../assets/GIT.png'
-import Figma from '../../assets/Figma.svg'
-import SAP from '../../assets/SAP.png'
 import { useState, useEffect } from 'react';
+import './style.css';
 
 function Card(props) {
+
+  const PBI = 'https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg'
+  const GIT = 'https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg'
+  const Figma = 'https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg'
+  const SAP = 'https://cdn.cdnlogo.com/logos/s/30/sap-bi.svg'
+  
   const [iconeOpacity, setIconeOpacity] = useState(1);
   const [imagemSRC, setImagemSRC] = useState("");
 
@@ -32,7 +34,7 @@ function Card(props) {
   };
 
   return (
-    <div className="card" alt="card" onClick={props.onClick}>
+    <div className="card" onClick={props.onClick}>
       <div className="titulo">{props.texto}</div>
       <img className="icone" src={imagemSRC} style={{...iconeStyle, opacity: iconeOpacity}}/>
       {/* Conteúdo do card aqui */}
