@@ -1,13 +1,13 @@
 import TopBar from '../../components/Nav'
 import Card from '../../components/cards'
 import PowerBI from '../../components/powerbi'
-import './style.css';
+import { Overlay } from './style'
 
 const Indicadores= () => {
 
   function FecharPowerBI() {
     const power = document.querySelector('.Power') as HTMLInputElement;
-    const overlay = document.querySelector('.overlay') as HTMLInputElement;
+    const overlay = document.querySelector(Overlay) as HTMLInputElement;
     power.classList.add('fechando');
     overlay.classList.add('fechando');
     setTimeout(() => {
@@ -18,7 +18,7 @@ const Indicadores= () => {
 
   return (
     <div className="Menu">
-    <div className="overlay" onClick={FecharPowerBI}/>
+    <Overlay onClick={FecharPowerBI}/>
     <TopBar />
       <body className="Menu-body">
         <PowerBI/>

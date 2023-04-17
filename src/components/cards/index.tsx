@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Cards, Titulo, Icone } from './style'
+import { Overlay } from '../../pages/Indicadores/style';
 export const PBI: string = 'https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg';
 export const GIT: string = 'https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg';
 export const Figma: string = 'https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg';
@@ -37,9 +38,9 @@ const Card: React.FC<CardProps> = (props) => {
   function AbrirPowerBI(link? : string){
     if (link !== undefined) {
       const power = document.querySelector('.Power') as HTMLInputElement;
-      const overlay = document.querySelector('.overlay') as HTMLInputElement;
       const iframe = document.querySelector('.LayoutBI') as HTMLInputElement;
       power.classList.add('ativo');
+      const overlay = document.querySelector(Overlay) as HTMLInputElement;
       overlay.classList.add('ativo'); 
       iframe.src = link;
     }
