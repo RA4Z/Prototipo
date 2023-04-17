@@ -10,6 +10,7 @@ type CardProps = {
   texto: string;
   ico: string;
   onClick: () => void;
+  target?: string;
 }
 
 const Card: React.FC<CardProps> = (props) => {
