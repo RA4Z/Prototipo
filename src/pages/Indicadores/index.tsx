@@ -2,21 +2,19 @@ import TopBar from '../../components/Nav'
 import Card from '../../components/cards'
 import PowerBI from '../../components/powerbi'
 import './style.css';
+export const power = document.querySelector('.Power') as HTMLInputElement;
+export const overlay = document.querySelector('.overlay') as HTMLInputElement;
+export const iframe = document.querySelector('.LayoutBI') as HTMLInputElement;
 
-function Indicadores() {
+const Indicadores= () => {
 
   function AbrirPowerBI(link){
-    const power = document.querySelector('.Power') as HTMLInputElement;
-    const overlay = document.querySelector('.overlay') as HTMLInputElement;
-    const iframe = document.querySelector('.LayoutBI') as HTMLInputElement;
     power.classList.add('ativo');
     overlay.classList.add('ativo'); 
     iframe.src = link;
   }
 
   function FecharPowerBI() {
-    const power = document.querySelector('.Power') as HTMLInputElement;
-    const overlay = document.querySelector('.overlay') as HTMLInputElement;
     power.classList.add('fechando');
     overlay.classList.add('fechando');
     setTimeout(() => {

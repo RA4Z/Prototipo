@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom';
-import Avatar from '../Avatar'
 import { Barra, Logo, AvatarAang } from './style'
+import Avatar from '../Avatar'
+export const linkLogo : string = "https://www.weg.net/institutional/_ui/desktop/theme-institutional/img/brand-white.svg";
 
 const NavBar = () => (
   <Barra><AvatarAang><Avatar/></AvatarAang>
-    <Link to="/"><Logo src= "https://www.weg.net/institutional/_ui/desktop/theme-institutional/img/brand-white.svg" /></Link>
+    <Link to="/"><Logo src={linkLogo} /></Link>
   </Barra>
 );
   
