@@ -34,8 +34,8 @@ const Card: React.FC<CardProps> = (props) => {
     }
   }, [props.ico]);
 
-  function AbrirPowerBI(link?){
-    if (link !== "") {
+  function AbrirPowerBI(link? : string){
+    if (link !== undefined) {
       const power = document.querySelector('.Power') as HTMLInputElement;
       const overlay = document.querySelector('.overlay') as HTMLInputElement;
       const iframe = document.querySelector('.LayoutBI') as HTMLInputElement;
